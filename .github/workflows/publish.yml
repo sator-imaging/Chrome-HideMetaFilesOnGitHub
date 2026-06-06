@@ -22,7 +22,8 @@ jobs:
           zip -r ./extension.zip \
             manifest.json \
             icons \
-            content.js
+            content.js \
+            style.css
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
