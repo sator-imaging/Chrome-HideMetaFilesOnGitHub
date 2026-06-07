@@ -82,6 +82,11 @@
     });
   }
 
+  // Global style insertion
+  const sheet = new CSSStyleSheet();
+  sheet.replaceSync('span[title="Label: Private"]:before { content: "🔒"; vertical-align: text-bottom; }');
+  document.adoptedStyleSheets = [...document.adoptedStyleSheets, sheet];
+
   // Initial execution
   hideMetaFiles();
 
